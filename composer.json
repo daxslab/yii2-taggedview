@@ -1,0 +1,21 @@
+{
+    "name": "daxslab/yii2-taggedview",
+    "description": "Extension to help setup the standard HTML meta tags besides the ones defined by Opengraph and Twitter to contribute to website SEO",
+    "type": "yii2-extension",
+    "keywords": ["yii2","seo","html","metatags","facebook","twitter"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Gabriel A. López López",
+            "email": "glpz@daxslab.com"
+        }
+    ],
+    "require": {
+        "yiisoft/yii2": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "daxslab\\taggedview\\": ""
+        }
+    }
+}
