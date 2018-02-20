@@ -6,6 +6,7 @@ Yii2 TaggedView Change Log
 
 - Fix #1: Do not send metatags in Ajax response.
 - Enh: Added this CHANGELOG.
+- Enh: Source code comments.
 
 
 1.0.0 December 24, 2016
