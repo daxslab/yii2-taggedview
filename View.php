@@ -62,20 +62,23 @@ class View extends BaseView
 
     protected function renderHeadHtml()
     {
-        if ($this->locale == null) {
-            $this->locale = str_replace('-', '_', Yii::$app->language);
-        }
 
-        if ($this->registerStandardTags) {
-            $this->registerStandardMetaTags();
-        }
+        if(!Yii::$app->request->isAjax){
+            if ($this->locale == null) {
+                $this->locale = str_replace('-', '_', Yii::$app->language);
+            }
 
-        if ($this->registerOpenGraphTags) {
-            $this->registerOpenGraphMetaTags();
-        }
+            if ($this->registerStandardTags) {
+                $this->registerStandardMetaTags();
+            }
 
-        if ($this->registerTwitterCardTags) {
-            $this->registerTwitterCardMetaTags();
+            if ($this->registerOpenGraphTags) {
+                $this->registerOpenGraphMetaTags();
+            }
+
+            if ($this->registerTwitterCardTags) {
+                $this->registerTwitterCardMetaTags();
+            }
         }
 
         array_multisort($this->metaTags);
