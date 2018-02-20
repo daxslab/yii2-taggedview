@@ -36,6 +36,18 @@ Configure the View component into the main configuration file of your applicatio
         ],
         ...
     ]
+    
+    
+Defaults
+--------
+
+The component will try to set some properties by default:
+
+    $this->site_name = Yii::$app->name;
+    $this->url = Yii::$app->request->baseUrl;
+    $this->locale = Yii::$app->language;
+    
+You can overwrite the content of this tags in every page or in the component configuration. 
 
 Usage
 -----
@@ -45,6 +57,6 @@ Once the extension is configured, simply use it in your views by:
     <?php 
     $this->title = 'page title';
     $this->description = 'page description';
-    $this->keywords = 'page keywords';
+    $this->keywords = ['keywords', 'for', 'this', 'page'];
     $this->image = 'http://domain.com/images/page-image.jpg'; 
     ?>
