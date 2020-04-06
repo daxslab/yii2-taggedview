@@ -121,6 +121,8 @@ class View extends BaseView
      */
     public function init()
     {
+        parent::init();
+
         if ($this->site_name == null) {
             $this->site_name = Yii::$app->name;
             $this->site = Yii::$app->name;
