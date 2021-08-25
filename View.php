@@ -127,9 +127,15 @@ class View extends BaseView
             $this->site_name = Yii::$app->name;
             $this->site = Yii::$app->name;
         }
+
+        if($this->site == null){
+            $this->site = $this->site_name;
+        }
+
         if ($this->url == null) {
             $this->url = Yii::$app->request->absoluteUrl;
         }
+
         if ($this->date == null){
             $this->date = Yii::$app->formatter->asDatetime(time());
         }
